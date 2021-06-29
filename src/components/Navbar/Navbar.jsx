@@ -1,9 +1,14 @@
 import './navbar.scss'
 import {Person, Mail} from "@material-ui/icons"
 
-export default function navbar(){
+export default function navbar({hamburgerMenu, setHamburgerMenu}){
+
+    const setOpen = () => {
+        setHamburgerMenu(!hamburgerMenu)
+    }
+
     return(
-        <div className='navbar' >
+        <div className={'navbar ' + (hamburgerMenu && 'active')} >
             <div className="wrapper">
                 <div className="left">
                     <a href="#intro" className='logo'>iuvenius.</a>
@@ -16,7 +21,13 @@ export default function navbar(){
                         <span>emrekurtt16@gmail.com</span>
                     </div>
                 </div>
-                <div className="right"></div>S
+                <div className="right">
+                    <div className="hamburger" onClick={()=>setOpen()}>
+                        <span className="line1"></span>
+                        <span className="line2"></span>
+                        <span className="line3"></span>
+                    </div>
+                </div>
             </div>
         </div>
     )
