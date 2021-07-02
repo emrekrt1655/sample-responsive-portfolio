@@ -15,19 +15,23 @@ export default function Portfolio(){
     const portfolioList = [
         {
             id:'featured',
-            title:"Featured"
+            title:"Featured",
+            key:0
         },
         {
             id:'frontend',
-            title:"Front End Application"
+            title:"Front End Application",
+            key:1
         },
         {
             id:'mobile',
-            title:"Mobile Application"
+            title:"Mobile Application",
+            key:2
         },
         {
             id:'backend',
-            title:"Backend Application"
+            title:"Backend Application",
+            key:3
         },
     ]
 
@@ -60,7 +64,8 @@ export default function Portfolio(){
                         <PortfolioList title={item.title} 
                         active={selected === item.id}
                         setSelected={setSelected}
-                        id ={item.id}/>
+                        id ={item.id}
+                        key={item.key}/>
                     ))
                 }
             </ul>
@@ -68,7 +73,7 @@ export default function Portfolio(){
 
                 {
                     data.map((d)=>(
-                        <div className="item">
+                        <div className="item" key={d.id} >
                         <img src={d.img} alt="foto" />
                         <h3>{d.title}</h3>
                     </div>
