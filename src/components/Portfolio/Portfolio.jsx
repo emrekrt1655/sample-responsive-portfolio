@@ -20,17 +20,17 @@ export default function Portfolio(){
         },
         {
             id:'frontend',
-            title:"Front End Application",
+            title:"Front End App",
             key:1
         },
         {
             id:'mobile',
-            title:"Mobile Application",
+            title:"Mobile App",
             key:2
         },
         {
             id:'backend',
-            title:"Backend Application",
+            title:"Backend App",
             key:3
         },
     ]
