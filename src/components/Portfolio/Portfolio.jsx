@@ -20,7 +20,7 @@ export default function Portfolio(){
         },
         {
             id:'frontend',
-            title:"Front End App",
+            title:"Web App",
             key:1
         },
         {
@@ -50,7 +50,7 @@ export default function Portfolio(){
                 setData(backendPortfolio)
                 break;
             default:
-                setData(featuredPortfolio)
+                setData(frontendPortfolio)
                 break;
         }
     }, [selected])
